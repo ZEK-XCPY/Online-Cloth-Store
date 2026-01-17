@@ -1,4 +1,4 @@
-console.log("SearchBar rendered");
+
 
 import React, { useContext, useEffect } from "react";
 import { ShopContext } from "../context/ShopContext";
@@ -13,12 +13,7 @@ const SearchBar = () => {
   const [visible, setVisible] = useState(false);
 
 
-  useEffect(() => {
-  console.log("pathname:", location.pathname);
-  console.log("showSearch:", showSearch);
-  console.log("visible:", visible);
-}, [location.pathname, showSearch, visible]);
-
+ 
 
   useEffect(() => {
     if (location.pathname.includes("collection")) {

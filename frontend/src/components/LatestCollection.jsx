@@ -2,13 +2,16 @@ import React, { useContext, useEffect, useState } from 'react'
 import { ShopContext } from '../context/ShopContext'
 import Title from './Title'
 import ProductItem from './ProductItem'
+import { useLocation } from "react-router-dom";
+
+
 const LatestCollection = () => {
 
   const {products} = useContext(ShopContext)
   const [latestProducts, setLatestProducts] = useState([]);
   useEffect(()=>{
         setLatestProducts(products.slice(0,10))
-  },[])
+  },[products])
 
   useEffect(() => {
   console.log("pathname:", location.pathname);
