@@ -1,6 +1,6 @@
 import React from 'react'
 import { assets } from '../assets/assets'
-import HeroImage from "../assets/HeroImage.png"
+import HeroImage from "../assets/HeroModel.png"
 const Hero = ({image}) => {
   return (
     <div className='flex flex-col sm:flex-row border border-gray-400 min-h-100'>
@@ -19,7 +19,7 @@ const Hero = ({image}) => {
             </div>
         </div>
         {/* Hero right side */}
-        <img className=' w-full sm:w-1/2 h-[200] object-cover' src={image} alt="" />
+        <img className=' w-full sm:w-1/2 h-[200] object-cover' src={HeroImage} alt="" />
     </div>
   )
 }
