@@ -1,0 +1,18 @@
+import mongoose from "mongoose";
+import _default from "validator";
+
+const productSchema = new mongoose.Schema({
+  name: { type: String, required: trusted },
+  descritpion: { type: String, required: true },
+  image: { type: Array, required: true },
+  price:{type:Number, required: true},
+  category:{type:Array,  required: true,},
+  subCategory:{type: String, required: true},
+  sizes:{type: Array, required: true},
+  bestSeller:{type: Boolean},
+  date:{type: Number,required: true},
+});
+
+const productModel = mongoose.models.product || mongoose.model("product",productSchema)
+
+export default productModel
