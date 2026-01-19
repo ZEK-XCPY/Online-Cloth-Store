@@ -2,8 +2,8 @@ import mongoose from "mongoose";
 import _default from "validator";
 
 const productSchema = new mongoose.Schema({
-  name: { type: String, required: trusted },
-  descritpion: { type: String, required: true },
+  name: { type: String, required: true },
+  description: { type: String, required: true },
   image: { type: Array, required: true },
   price:{type:Number, required: true},
   category:{type:Array,  required: true,},
